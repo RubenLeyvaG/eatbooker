@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EAT BOOKER</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gideon+Roman&family=Open+Sans&family=PT+Sans:wght@400;700&family=Roboto+Mono:wght@400;700&family=Sanchez:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../HTML_INTERFAZ/CSS/normalize.css">
+    <link rel="stylesheet" href="../HTML_INTERFAZ/CSS/style.css">
+
+</head>
+
+<body>
+    <header class="header">
+
+        <div class="contenedor">
+            <div class="barra">
+                <a class="logo" href="../CONTROL/index.php">
+                    <h1 class="logo__nombre">Eat<span class="logo__bold">Booker</span></h1>
+                </a>
+        
+                <nav class="navegacion">
+                    <a class="navegacion__enlaces" href="../CONTROL/click_nosotros.php">Nosotros</a>
+                    <a class="navegacion__enlaces navegacion__enlaces--activo" href="../CONTROL/click_registrar.php">Iniciar Sesion / Registrarse</a>
+                </nav>
+            </div>
+            
+        </div>
+
+        
+    </header>
+
+
+    <main class="contenedor_principal">
+
+        <div class="contenedor_inicio">
+            <form class="formulario" name="form_02" action="click_registrar.php" method="POST" onsubmit="return validarContraseñas()">
+                <legend>Registrarse</legend>
+                <div class="contenedor-campos">
+                    <div class="campos">
+                        <label>Nombre(s)</label>
+                        <input type="text" name="caja_texto1" class="caja_txt" placeholder="Tu nombre(s)">
+                    </div>
+        
+                    <div class="campos">
+                        <label>Apellidos</label>
+                        <input type="text" name="caja_texto2" class="caja_txt" placeholder="Tus apellido">
+                    </div>
+        
+                    <div class="campos">
+                        <label>Telefono</label>
+                        <input type="number" name="caja_texto3" class="caja_txt" placeholder="Tu telefono">
+                    </div>
+        
+                    <div class="campos">
+                        <label>Correo</label>
+                        <input type="email" name="caja_texto4" class="caja_txt" placeholder="Tu correo">
+                    </div>
+        
+                    <div class="campos">
+                        <label>Contraseña</label>
+                        <input type="password" name="caja_texto5" class="caja_txt" placeholder="Tu contraseña">
+                    </div>
+
+                    <div class="campos">
+                        <label>Repetir Contraseña</label>
+                        <input type="password" name="caja_texto6" class="caja_txt" placeholder="Repite tu contraseña">
+                    </div>
+                </div>
+        
+                <button class="boton" value="registrar" type="submit" name="click_registrar">Registrar</button>
+        
+                <div class="registro">
+                    Ya tienes cuenta? <a class="enlace" href="../CONTROL/click_iniciar_sesion.php">Iniciar Sesión</a>
+                </div>
+        
+                <script>
+                    function validarContraseñas() {
+                        var contraseña1 = document.forms["form_02"]["caja_texto5"].value;
+                        var contraseña2 = document.forms["form_02"]["caja_texto6"].value;
+                        
+                        if (contraseña1 != contraseña2) {
+                            alert("Las contraseñas no coinciden, por favor inténtalo de nuevo.");
+                            return false;
+                        }
+                        return true;
+                    }
+                </script>
+            </form>
+        </div>
+    </main>
+
+    <footer class="pie">
+        <p>Todos los derechos reservados- Equipo3</p>
+    </footer>
+
+</body>
+
+</html>
