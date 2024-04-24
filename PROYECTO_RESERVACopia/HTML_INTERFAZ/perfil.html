@@ -1,0 +1,56 @@
+<?php
+session_start();
+?>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EAT BOOKER</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gideon+Roman&family=Open+Sans&family=PT+Sans:wght@400;700&family=Roboto+Mono:wght@400;700&family=Sanchez:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../HTML_INTERFAZ/CSS/normalize.css">
+    <link rel="stylesheet" href="../HTML_INTERFAZ/CSS/style.css">
+</head>
+<body>
+
+    <header class="header">
+
+        <div class="contenedor">
+            <div class="barra">
+                <a class="logo" href="../CONTROL/scrPerfil.php">
+                    <h1 class="logo__nombre">Eat<span class="logo__bold">Booker</span></h1>
+                </a>
+        
+                <nav class="navegacion">
+                    <a class="navegacion__enlaces" href="../CONTROL/click_nosotrosPerfil.php">Nosotros</a>
+                    <?php if (isset($_SESSION['nombre'])): ?>
+                    <a class="navegacion__enlaces navegacion__enlaces--activo" href="../CONTROL/click_perfil.php">Perfil</a>
+                    <a class="navegacion__enlaces" href="../CONTROL/click_cerrar_sesion.php">Cerrar Sesión</a>
+                    <?php endif; ?>
+
+                </nav>
+            </div>
+            
+        </div>
+        
+        
+    </header>
+
+    <main class="contenedor_principal">
+        <h2>Reservas de {NOMBRE_USUARIO}</h2>
+        <?php foreach ($reservaciones as $reserva): ?>
+            <!--<div class="reserva">
+                <p>ID de reserva: <?php echo $reserva['id_reserva']; ?></p>
+                <p>Restaurante: <?php echo $reserva['nombre_restaurante']; ?></p>
+                <p>Fecha: <?php echo $reserva['fecha']; ?></p>
+                <p>Hora: <?php echo $reserva['hora']; ?></p>
+                <p>Cantidad de personas: <?php echo $reserva['cantidad_personas']; ?></p>
+            </div>
+        <?php endforeach; ?> -->
+    </main>
+
+
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EAT BOOKER</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gideon+Roman&family=Open+Sans&family=PT+Sans:wght@400;700&family=Roboto+Mono:wght@400;700&family=Sanchez:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../HTML_INTERFAZ/CSS/normalize.css">
+    <link rel="stylesheet" href="../HTML_INTERFAZ/CSS/style.css">
+
+</head>
+<body class="degradado">
+
+    <header class="header">
+
+        <div class="contenedor">
+            <div class="barra">
+                <a class="logo" href="../CONTROL/scrPerfil.php">
+                    <h1 class="logo__nombre">Eat<span class="logo__bold">Booker</span></h1>
+                </a>
+        
+                <nav class="navegacion">
+                    <a class="navegacion__enlaces" href="../CONTROL/click_nosotrosPerfil.php">Nosotros</a>
+                    <a class="navegacion__enlaces" href="../CONTROL/click_perfil.php">Perfil</a>
+                    <a class="navegacion__enlaces" href="../CONTROL/click_iniciar_sesion.php">Cerrar Sesión</a>
+                </nav>
+
+            </div>
+            
+        </div>
+
+        
+    </header>
+
+    <section class="hero">
+        <div class="contenido-hero">
+            <h2>Reserva tu mesa en un bocado con<span> EatBooker</span> </h2>
+        
+            <div class="ubicacion">
+            
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-pin" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="#ffbf00" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
+                    <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z" />
+                </svg>
+                <p>Ixtlahuaca, Estado de México</p>
+            </div>
+            
+        </div> <!--.contenido-hero-->
+        
+    </section>
+
+    <main class="contenedor_principal">
+        <h2>Restaurantes</h2>
+
+        <div class="grid">
+            <div class="restaurante sombra">
+                <a href="../CONTROL/click_restaurante1Perfil.php">
+                    <img src="../HTML_INTERFAZ/img/Restaurante2.jpg" alt="Restaurante1">
+                    <div class="restaurante__informacion">
+                        <p class="restaurante__nombre">Mar y Sabor</p>
+                        <p class="restaurante__descripcion">Descripción</p>
+                        <p class="bloque__descripcion"> Sumérgete en una experiencia culinaria costera con nuestros exquisitos mariscos frescos y pescados del día. Desde langostas hasta camarones, cada bocado te transportará a las brisas del océano y te deleitará con sabores auténticos y deliciosos.</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="restaurante sombra">
+                <a href="../CONTROL/click_restaurante2Perfil.php">
+                    <img src="../HTML_INTERFAZ/img/Restaurante1.jpg" alt="Restaurante1">
+                    <div class="restaurante__informacion">
+                        <p class="restaurante__nombre">BurgerWing Express</p>
+                        <p class="restaurante__descripcion">Descripción</p>
+                        <p class="bloque__descripcion">¡Prepárate para una explosión de sabor con nuestras hamburguesas jugosas y alitas crujientes! Desde clásicas hamburguesas gourmet hasta alitas bañadas en una variedad de salsas, cada plato es una invitación a disfrutar de la combinación perfecta de texturas y sabores que satisfarán cualquier antojo."</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="restaurante sombra">
+                <a href="../CONTROL/click_restaurante3Perfil.php">
+                    <img src="../HTML_INTERFAZ/img/Restaurante3.jpeg" alt="Restaurante1">
+                    <div class="restaurante__informacion">
+                        <p class="restaurante__nombre">El Sabor Auténtico</p>
+                        <p class="restaurante__descripcion">Descripción</p>
+                        <p class="bloque__descripcion">Descubre el alma de México en cada plato que servimos. Desde tacos hasta enchiladas, nuestro menú está lleno de auténticos sabores mexicanos preparados con ingredientes frescos y recetas tradicionales. Déjate seducir por la riqueza de nuestras especias y la calidez de nuestra hospitalidad.</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="restaurante sombra">
+                <a href="../CONTROL/click_restaurante4Perfil.php">
+                    <img src="../HTML_INTERFAZ/img/Restaurante4.jpg" alt="Restaurante1">
+                    <div class="restaurante__informacion">
+                        <p class="restaurante__nombre">El Asador Argentino</p>
+                        <p class="restaurante__descripcion">Descripción</p>
+                        <p class="bloque__descripcion">Para los amantes de la carne, ofrecemos una experiencia gastronómica incomparable con los mejores cortes de carne seleccionados y preparados a la perfección. Desde filetes jugosos hasta costillas tiernas, cada bocado es una celebración del arte de la parrilla y la calidad de los ingredientes. Sumérgete en un festín de sabores intensos y texturas exquisitas.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Todos los derechos reservados- Equipo3</p>
+    </footer>
+    
+</body>
+</html>

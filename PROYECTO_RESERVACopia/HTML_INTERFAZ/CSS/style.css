@@ -1,0 +1,526 @@
+:root {
+    --blanco: #ffffff;
+    --oscuro: #070707;
+    --oscuro_claro: #7d7d7d;
+    --rojo_claro: #ff4949;
+    --rojo_claro1: #ffb3b3;
+    --rojo_fuerte: #a10202;
+    --rojo: #e50000;
+    --fuenteP: "Sanchez", serif;
+    
+}
+
+/*  GLOBALES */ 
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,*::before, *::after{
+    box-sizing: inherit;
+}
+
+body {  
+    font-size: 16px; /*  1rem = 10px */ 
+    line-height: 1.5;  /* INTERLINEADO */ 
+}
+
+.degradado{
+    background-image: linear-gradient(to top, var(--rojo_claro1) 10%, var(--blanco) 60%);
+}
+
+h1{
+    font-size: 4rem;
+}
+
+h2{
+    font-size: 3.2rem;
+}
+
+h3{
+    font-size: 2.4rem;
+}
+
+h1, 
+h2,
+h3{
+    text-align: center;
+    font-family: var(--fuenteP);
+}
+
+p{
+    font-family: var(--fuenteP);
+}
+
+a{
+    text-decoration: none;
+}
+
+footer{
+    text-align: center;
+    font-family: var(--fuenteP);
+}
+
+.pie{
+    margin-top: 10rem;
+}
+
+
+/* HEADER */ 
+
+.header{
+    background-color: var(--oscuro);
+    padding: 1rem;
+    color: var(--blanco);
+    text-align: center;
+}
+
+
+@media (min-width: 768px) {
+    .barra{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.logo{
+    color: var(--blanco);
+}
+
+.logo__nombre{
+    font-weight: 400;
+}
+
+.logo__bold{
+    font-weight: 700;
+}
+
+
+/* NAVEGACION */ 
+
+.navegacion__enlaces{
+    color: var(--blanco);
+    display: block;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    transition: color .6s ease;
+    margin-top: 2rem;
+}
+
+.navegacion__enlaces:hover{
+    color: var(--rojo);
+}
+
+@media (min-width: 768px) {
+    .navegacion{
+        display: flex;
+        gap: 2rem;
+    }
+}
+
+.navegacion__enlaces--activo,
+.navegacion__enlaces:hover{
+    color: var(--rojo);
+}
+
+
+/* HERO */ 
+
+.hero{
+    background-image: url(../img/Reservas.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 60rem;
+    position:relative;
+    background-position: center center;
+    
+}
+
+.contenido-hero{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5); /* ANTERIOR */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenido-hero h2,
+.contenido-hero p{
+    color: var(--blanco);
+}
+
+.contenido-hero .ubicacion{
+    display: flex;
+    align-items: flex-end;
+}
+
+/* CONTENEDOR PRINCIPAL */ 
+
+.contenedor_principal{
+    max-width: 140rem;
+    text-align: center;
+    margin: 0 auto; /* Centra horizontalmente */
+    align-items: center; /* Alinea verticalmente */
+    justify-content: center;
+}
+
+.contenedor_principal h2{
+    text-transform: uppercase;
+}
+
+
+/* RESTAURANTES */
+
+.grid{
+    display: grid;
+    text-align: center;
+    margin-top: 2rem;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .grid{
+        display: grid;
+        grid-template-columns:repeat(2, 1fr);
+        gap: 5rem;
+    }
+}
+
+.restaurante{
+    margin-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+    .restaurante img{
+        height: 45rem;
+        padding: 1rem;
+        width: 100%;
+    }
+    
+}
+
+.restaurante img{
+    height: 30rem;
+    padding: 1rem;
+    width: 100%;
+}
+
+.sombra {
+    box-shadow: 0px 4px 19px 0px rgba(79,79,79,0.67);
+    background-color: var(--blanco);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.restaurante__informacion{
+    text-decoration: none;
+    font-family: var(--fuenteP);
+    color: #000;
+
+}
+
+.restaurante__nombre{
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+
+.restaurante__descripcion{
+    font-weight: 700;
+}
+
+/*  NOSOTROS */ 
+.nosotros{ 
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    text-align: center;
+}
+
+.nosotros__imagen{
+    grid-row: 1 / 2;
+    height: 28rem;
+    width: 33rem;
+    text-align: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .nosotros__imagen{
+        grid-column: 2 / 3;
+    }
+
+    .nosotros__imagen{
+        width: auto;
+        height: 30rem;
+    }
+    
+}
+
+/* BLOQUES */ 
+
+.bloques{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .bloques{
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+}
+
+.bloque__imagen{
+    height: 10rem;
+    box-shadow: 0px 4px 19px 0px rgba(79,79,79,0.67);
+    background-color: var(--blanco);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.bloques{
+    text-align: center;
+}
+
+.bloque__titulo{
+    margin: 0;
+}
+
+.bloque__descripcion{
+    text-align: justify;
+    margin: 1rem 2rem;
+}
+
+/* Iniciar sesion */ 
+
+.contenedor_inicio{
+    box-shadow: 0px 4px 19px 0px rgba(79,79,79,0.67);
+    background-color: var(--blanco);
+    padding: 2rem;
+    border-radius: 1rem;
+    font-family: var(--fuenteP);
+    width: min(60rem, 100%);
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 1rem;
+    margin-top: 3rem;
+    text-align: left;
+}
+
+.formulario legend{
+
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.campos{
+    margin-bottom: 1rem;
+}
+
+.registro{
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.enlace{
+    color: var(--rojo_fuerte);
+}
+
+.caja_txt{
+    width: 100%;
+    padding: 1.5rem;
+    border-radius: 1rem;
+}
+
+.boton{
+    background-color: var(--oscuro);
+    color: var(--blanco);
+    padding: 1rem 3rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: .5rem;
+    width: 90%;
+    text-align: center;
+    border: none;
+    transition: background-color .6s ease;
+
+}
+
+.boton:hover{
+    background-color: var(--rojo);
+    cursor: pointer;
+}
+
+/* RESTAURANTES SECCIONES */ 
+
+.hero1{
+    background-image: url(../img/Restaurante2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 60rem;
+    position:relative;
+    background-position: center center;
+    
+}
+
+.hero2{
+    background-image: url(../img/Restaurante1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 60rem;
+    position:relative;
+    background-position: center center;
+    
+}
+
+.hero3{
+    background-image: url(../img/Restaurante3.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 60rem;
+    position:relative;
+    background-position: center center;
+    
+}
+
+.hero4{
+    background-image: url(../img/Restaurante4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 60rem;
+    position:relative;
+    background-position: center center;
+    
+}
+
+.parrafo__restaurante{
+    font-size: 1.8rem;
+}
+
+.contenedor_restaurantes{
+    margin: 4rem auto;
+    max-width: 100rem;
+}
+
+.formulario_restaurante legend{
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+
+.campos_r{
+    font-family: var(--fuenteP);
+    margin: 2rem auto;
+}
+
+.caja_txt_r{
+    font-size: 2rem;
+}
+
+.cantidad{
+    font-size: 2rem;
+}
+
+@media (min-width: 768px) {
+
+    .contenedor__campos{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .campos_rh{
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+    }
+    
+    .campos_rc{
+        grid-column: 1 / 2;
+    }
+}
+
+.boton_r{
+    font-size: 3rem;
+    padding: 1rem;
+    margin: .5rem auto;
+    border: none;
+    color: var(--blanco);
+    background-color: var(--oscuro);
+    text-transform: uppercase;
+    transition: background-color .6s ease;
+}
+
+.boton_r:hover{
+    background-color: var(--rojo);
+    cursor: pointer;
+}
+
+/* GALERIA RESTAURANTES */
+
+.galeria{
+    display: flex;
+    width: 35rem;
+    height: 20rem;
+    margin: 0 auto;
+}
+
+.galeria__imagen{
+    width: 0;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .8;
+    transition: .8 ease;
+}
+
+.galeria__imagen:hover{
+    cursor: crosshair;
+    width: 30rem;
+    opacity: 1;
+    filter: contrast(120%);
+}
+
+@media (min-width: 768px) {
+    .galeria{
+        display: flex;
+        width: 70rem;
+        height: 50rem;
+        margin: 0 auto;
+    }
+
+    .galeria__imagen:hover{
+        cursor: crosshair;
+        width: 60rem;
+        opacity: 1;
+        filter: contrast(120%);
+    }
+}
+
+/* MENÚ */
+
+.menu{
+    text-align: center;
+}
+.menu__imagen{
+    width: 35rem;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .menu__imagen{
+        width: 60rem;
+    }
+}
+
+.reserva{
+    font-family: var(--fuenteP);
+}

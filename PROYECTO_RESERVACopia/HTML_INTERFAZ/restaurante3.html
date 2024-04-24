@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurante3</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gideon+Roman&family=Open+Sans&family=PT+Sans:wght@400;700&family=Roboto+Mono:wght@400;700&family=Sanchez:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../HTML_INTERFAZ/CSS/normalize.css">
+    <link rel="stylesheet" href="../HTML_INTERFAZ/CSS/style.css">
+</head>
+<body>
+    <header class="header">
+
+        <div class="contenedor">
+            <div class="barra">
+                <a class="logo" href="../CONTROL/index.php">
+                    <h1 class="logo__nombre">Eat<span class="logo__bold">Booker</span></h1>
+                </a>
+        
+                <nav class="navegacion">
+                    <a class="navegacion__enlaces" href="../CONTROL/click_nosotros.php">Nosotros</a>
+                    <a class="navegacion__enlaces" href="../CONTROL/click_iniciar_sesion.php">Iniciar Sesion / Registrarse</a>
+                </nav>
+            </div>
+            
+        </div>
+
+        
+    </header>
+
+    <section class="hero3">
+        <div class="contenido-hero">
+            <h2>El Sabor Auténtico</h2>
+        
+            <div class="ubicacion">
+            
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-check" width="60" height="60" viewBox="0 0 24 24" stroke-width="2" stroke="#ff9300" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M11.5 21h-5.5a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v6" />
+                    <path d="M16 3v4" />
+                    <path d="M8 3v4" />
+                    <path d="M4 11h16" />
+                    <path d="M15 19l2 2l4 -4" />
+                </svg>
+                <p class="parrafo__restaurante">Reserva hoy mismo</p>
+            </div>
+            
+        </div> <!--.contenido-hero-->
+        
+    </section>
+
+    <main class="contenedor_restaurantes sombra">
+        <div class="info__restaurante">
+            <h2>Reservas</h2>
+
+            <form class="formulario_restaurante">
+                <legend>Llena los datos sobre tu reserva</legend>
+
+                <div class="contenedor__campos">
+                <div class="campos_r campos_rf">
+                    <label>Fecha de tu reserva:</label>
+                    <input type="date" name="caja_texto1" class="caja_txt_r">
+                </div>
+
+                <div class="campos_r campos_rc">
+                    <label>Numero de personas:</label>
+                    <input class="Cantidad" type="number" placeholder="Cantidad" min="1">
+                </div>
+
+                <div class="campos_r campos_rh">
+                    <label>Hora de tu reserva:</label>
+                    <input type="time" name="caja_texto1" class="caja_txt_r">
+                </div>
+                <button class="boton_r" type="submit" name="reservar">Reservar</button>
+            </div>
+            </form>
+        </div>
+    </main>
+    <div class="informacion_r">
+        <h2>Más información</h2>
+        <h3>Galeria</h3>
+    </div>
+    <section class="galeria">
+        
+        <img class="galeria__imagen" src="../HTML_INTERFAZ/img/restaurante3/imagen1.jpg" alt="restaurante1">
+        <img class="galeria__imagen" src="../HTML_INTERFAZ/img/restaurante3/imagen2.jpg" alt="restaurante1">
+        <img class="galeria__imagen" src="../HTML_INTERFAZ/img/restaurante3/imagen3.jpg" alt="restaurante1">
+        <img class="galeria__imagen" src="../HTML_INTERFAZ/img/restaurante3/imagen4.jpg" alt="restaurante1">
+        <img class="galeria__imagen" src="../HTML_INTERFAZ/img/restaurante3/imagen5.jpg" alt="restaurante1">
+    </section>
+
+
+
+    <section class="menu">
+        <h2>Menú</h2>
+        <img class="menu__imagen" src="../HTML_INTERFAZ/img/MenuR3.jpg" alt="menu">
+    </section>
+
+
+    <footer>
+        <p>Todos los derechos reservados- Equipo3</p>
+    </footer>
+
+</body>
+</html>
